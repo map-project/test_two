@@ -56,9 +56,16 @@ load();
 }).addTo( map )
      
 
+                for(i=0;i<_data.length;i++)
+{
+  
+  
+  L.marker([_data[i].details.latitude, _data[i].details.longitude],
+           {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'red', spin:true}).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
+}
 
       
-  L.marker([28.941196,77.512291],{icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'red', spin:true}) }).addTo(map);        
+//  L.marker([28.941196,77.512291],{icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'red', spin:true}) }).addTo(map);        
 
  </script>
 
