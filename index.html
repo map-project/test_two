@@ -70,6 +70,12 @@ load();
   L.marker([_data[i].details.latitude, _data[i].details.longitude],
            {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'green', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
 }
+    else if(_data[i].details.line=="Airport Expres")
+  {
+  
+  L.marker([_data[i].details.latitude, _data[i].details.longitude],
+           {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'orange', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
+}
   else
   {}
 }
