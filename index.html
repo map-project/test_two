@@ -58,11 +58,11 @@ load();
 
                 for(i=0;i<_data.length;i++)
 {
-  if(_data[i].details.line=="Yellow Line")
+  if(_data[i].details.line=="Blue Line")
   {
   
   L.marker([_data[i].details.latitude, _data[i].details.longitude],
-           {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', iconColor: 'yellow', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
+           {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', iconColor: 'blue', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
 }
 }
 
