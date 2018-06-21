@@ -62,7 +62,7 @@ load();
   {
   
   L.marker([_data[i].details.latitude, _data[i].details.longitude],
-           {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'yellow', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
+           {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', iconColor: 'yellow', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
 }
 }
 
