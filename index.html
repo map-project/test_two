@@ -28,14 +28,28 @@
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   subdomains: ['a', 'b', 'c']
 }).addTo( map )
-       		
+     
+                
+                siddh="red";
+                if(siddh=="red")
+                {
   var redMarker = L.AwesomeMarkers.icon({
     icon: 'coffee',
     markerColor: 'red'
   });
       
   L.marker([28.941196,77.512291], {icon: redMarker}).addTo(map);        
-          
+                }
+                
+                else
+                {
+                var blueMarker = L.AwesomeMarkers.icon({
+    icon: 'coffee',
+    markerColor: 'blue'
+  });
+      
+  L.marker([28.941196,77.512291], {icon: blueMarker}).addTo(map);    
+                }
  </script>
 
        </body>
