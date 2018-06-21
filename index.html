@@ -58,25 +58,49 @@ load();
 
                 for(i=0;i<_data.length;i++)
 {
-  if((_data[i].details.line=="Blue Line")||(_data[i].details.line=="Blue Line branch"))
+  if((_data[i].details.line[0]=="Blue Line")||(_data[i].details.line=="Blue Line branch"))
   {
   
   L.marker([_data[i].details.latitude, _data[i].details.longitude],
            {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'blue', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
 }
-  else if(_data[i].details.line=="Green Line")
+  else if(_data[i].details.line[0]=="Green Line")
   {
   
   L.marker([_data[i].details.latitude, _data[i].details.longitude],
            {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'green', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
 }
-    else if(_data[i].details.line=="Airport Expres")
+    else if(_data[i].details.line[0]=="Airport Expres")
   {
   
   L.marker([_data[i].details.latitude, _data[i].details.longitude],
            {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'orange', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
 }
-      else if(_data[i].details.line=="Red Line")
+      else if(_data[i].details.line[0]=="Red Line")
+  {
+  
+  L.marker([_data[i].details.latitude, _data[i].details.longitude],
+           {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'red', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
+}
+  else  if((_data[i].details.line[1]=="Blue Line")||(_data[i].details.line=="Blue Line branch"))
+  {
+  
+  L.marker([_data[i].details.latitude, _data[i].details.longitude],
+           {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'blue', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
+}
+  else if(_data[i].details.line[1]=="Green Line")
+  {
+  
+  L.marker([_data[i].details.latitude, _data[i].details.longitude],
+           {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'green', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
+}
+    else if(_data[i].details.line[1]=="Airport Expres")
+  {
+  
+  L.marker([_data[i].details.latitude, _data[i].details.longitude],
+           {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'orange', spin:true}) }).bindPopup(_data[i].name+ '<br>'+_data[i].details.line).addTo(map);
+}
+      else if(_data[i].details.line[1]=="Red Line")
   {
   
   L.marker([_data[i].details.latitude, _data[i].details.longitude],
