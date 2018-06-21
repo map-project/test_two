@@ -31,24 +31,19 @@
      
                 
                 siddh="red";
-                if(siddh=="re")
+                if(siddh=="red")
                 {
   var redMarker = L.AwesomeMarkers.icon({
     icon: 'coffee',
     markerColor: 'red'
   });
       
-  L.marker([28.941196,77.512291], {icon: redMarker}).addTo(map);        
+  L.marker([28.941196,77.512291],{icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'red', spin:true}) }).addTo(map);        
                 }
                 
                 else
                 {
-                var blueMarker = L.AwesomeMarkers.icon({
-    icon: 'coffee',
-    markerColor: 'blue'
-  });
-      
-  L.marker([28.941196,77.512291], {icon: blueMarker}).addTo(map);    
+                
                 }
  </script>
 
